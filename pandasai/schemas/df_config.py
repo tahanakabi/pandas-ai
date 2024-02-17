@@ -1,14 +1,14 @@
-from typing import Any, Dict, List, Optional, TypedDict
-
+from typing import Any, Dict, List, Optional
+from typing_extensions import TypedDict
 from pydantic import BaseModel, Field, validator
-
+from types import NoneType
 from pandasai.constants import DEFAULT_CHART_DIRECTORY
 
 from ..exceptions import LLMNotFoundError
 from ..helpers.viz_library_types.base import VisualizationLibrary
 from ..llm import LLM, LangchainLLM
 
-
+from typing import Any, Dict, List, Optional, Union
 class LogServerConfig(TypedDict):
     server_url: str
     api_key: str
@@ -31,7 +31,7 @@ class Config(BaseModel):
     response_parser: Any = None
     llm: Any = None
     data_viz_library: Optional[VisualizationLibrary] = None
-    log_server: LogServerConfig = None
+    log_server: Union[LogServerConfig, NoneType] = None
     direct_sql: bool = False
 
     class Config:

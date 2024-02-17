@@ -12,6 +12,7 @@ This is the initial python function. Given the context, use the right dataframes
 {current_code}
 
 Take a deep breath and reason step-by-step. Act as a senior data analyst.
+NEVER PLOT ANY DATA IN ANY CASE. YOU CAN CALCULATE METRICS AND RETURN STATISTICS WITHOUT USING ANY PLOTS.
 In the answer, you must never write the "technical" names of the tables.
 Based on the last message in the conversation:
 - return the updated analyze_data function wrapped within ```python ```"""  # noqa: E501
